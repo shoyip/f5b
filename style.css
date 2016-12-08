@@ -1,6 +1,5 @@
-
 html { font: 12pt Helvetica,"Helvetica Neue",Arial,Verdana,"Open Sans",sans; }
-body { background: url(logo.png) no-repeat fixed right top; counter-reset: figures;}
+body { background: url(logo.svg) no-repeat fixed right top; background-size: 100px auto; counter-reset: figures;}
 body > * { margin: 1.5rem; }
 header h1 { margin-bottom: 0; }
 .sub { font-size: 1.2rem; color: #666; }
