@@ -46,7 +46,7 @@ only screen and (max-width: 760px),
 	figure img { width: 100%; height: auto; }
 	section { display: flex; flex-direction: column; }
 	table.summary th { text-align: left; }
-/* Force table to not be like tables anymore */
+	/* Force table to not be like tables anymore */
 	table.syllabus table, thead, tbody, th, td, tr { 
 		display: block; 
 	}
