@@ -50,6 +50,7 @@ only screen and (max-width: 760px),
 	table.syllabus table, thead, tbody, th, td, tr { 
 		display: block; 
 	}
+	table.syllabus th[scope="row"]:before { content: "Lezione №"; }
 	/* Hide table headers (but not display: none;, for accessibility) */
 	table.syllabus thead tr { 
 		position: absolute;
