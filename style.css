@@ -1,9 +1,21 @@
-html { font: 12pt Helvetica,"Helvetica Neue",Arial,Verdana,"Open Sans",sans; margin: 0; width: 100%; }
-body { counter-reset: figures; margin: 0;}
+html {
+	margin: 0;
+	width: 100%;
+}
+
+body {
+	font-size: 12pt;
+	font-family: Helvetica,"Helvetica Neue",Arial,Verdana,"Open Sans",sans;
+	counter-reset: figures;
+	margin: 0;
+}
+
+@media only screen {
+.phead, .pfoot { display: none; } }
 
 em { font-style: italic; }
 strong { font-weight: bold; }
-a { color: #107896color: #107896; }
+a { color: #107896; }
 
 .container { max-width: 1024px; margin: 0 auto; width: 100%; position: relative;}
 header { color: #fff; height: 100px; background: url("logo.svg") no-repeat #107896 10px 50%; background-size: 70px auto; padding-left: 90px; padding-top: 10px; padding-bottom: 10px; display: table; width: calc( 100% - 90px ); }
@@ -87,14 +99,4 @@ only screen and (max-width: 760px),
 	table.syllabus td:nth-of-type(7):before { content: "Note"; }
 }
 
-@media only print {
-	body {margin:0;padding:0;font-size:0.8rem;}
-	table.syllabus  {margin:0;}
-	.update {display:none;}
-	table.syllabus td, table.syllabus th {border: 2px solid #666; padding: 0.5rem;}
-}
-
-@media only tty {
-	figure { display: none; }
-}
-.update { color: #999; font-style: italic;}	
+.update { color: #999; font-style: italic;}

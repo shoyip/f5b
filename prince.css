@@ -1,0 +1,42 @@
+@font-face {
+	font-family: serif;
+	font-style: normal;
+	font-weight: normal;
+	src: url(/home/shoichi/.fonts/LinLibertine_R.otf);
+}
+
+@font-face {
+	font-family: serif;
+	font-style: italic;
+	font-weight: normal;
+	src: url(/home/shoichi/.fonts/LinLibertine_RI.otf);
+}
+
+@font-face {
+	font-family: serif;
+	font-style: normal;
+	font-weight: bold;
+	src: url(/home/shoichi/.fonts/LinLibertine_RB.otf);
+}
+
+body { font-family: serif; font-size: 12pt; }
+
+.syllabus tbody td:nth-of-type(1)
+{ white-space: nowrap; }
+
+.syllabus thead th:nth-of-type(4),
+.syllabus thead th:nth-of-type(5),
+.syllabus thead th:nth-of-type(6),
+.syllabus tbody td:nth-of-type(3),
+.syllabus tbody td:nth-of-type(4),
+.syllabus tbody td:nth-of-type(5) {
+	display: none; }
+
+@page {
+	font-family: serif;
+	font-size: 10pt;
+	size: A4 portrait;
+	@top-left { content: "Storia della Filosofia - Programma di Studio"; border-bottom: 1px solid black; margin-bottom: 0.5cm; font-variant: small-caps; }
+	@top-right { content: "Prof.ssa Maria Leonardi"; border-bottom: 1px solid black; margin-bottom: 0.5cm; font-variant: small-caps; }
+	@bottom-center { content: "Pagina " counter(page) " di " counter(pages); border-top: 1px solid black; margin-top: 0.5cm; }
+}

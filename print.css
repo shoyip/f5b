@@ -1,0 +1,11 @@
+body { display: table; margin-top: 0.7cm; margin-bottom: 0.7cm; }
+/*.phead { background: white; height: 0.5cm; width: 100%; padding: 5px; border-bottom: 1.5px solid #000; font-feature-settings: 'smcp'; font-variant: small-caps; position: fixed; top: 0; }
+.phead #psxsup { display: inline-block; width: 50%; text-align: left; }
+.phead #pdxsup { display: inline-block; width: 50%; text-align: right; }
+.pfoot { background: white; display: table-footer-group; width: 100%; height: 0.5cm; padding: 5px; border-top: 1.5px solid #000; display: table; position: fixed; bottom: 0; }
+#page { display: inline-block; width: 100%; text-align: center; }
+#page:after { counter-increment: page; content: counter(page); }*/
+header { background: none transparent; color: #107896; padding: 0; height: 70px; }
+table { padding: 0; }
+.sub { color: inherit; }
+figure, .update { display: none; }
