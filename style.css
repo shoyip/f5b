@@ -1,0 +1,100 @@
+html { font: 12pt Helvetica,"Helvetica Neue",Arial,Verdana,"Open Sans",sans; margin: 0; width: 100%; }
+body { counter-reset: figures; margin: 0;}
+
+em { font-style: italic; }
+strong { font-weight: bold; }
+a { color: #107896color: #107896; }
+
+.container { max-width: 1024px; margin: 0 auto; width: 100%; position: relative;}
+header { color: #fff; height: 100px; background: url("logo.svg") no-repeat #107896 10px 50%; background-size: 70px auto; padding-left: 90px; padding-top: 10px; padding-bottom: 10px; display: table; width: calc( 100% - 90px ); box-shadow: inset 0 0 20px #000;}
+div.tns { display: table-cell; vertical-align: middle; }
+header h1 { margin-bottom: 0; font-size: 1.7rem; font-weight: bold; }
+.sub { font-size: 1.2rem; color: #fff; }
+section.intro { width: 100%; }
+figure { width: 150px; counter-increment: figures; float: left; padding: 2rem; }
+figure img { width: inherit; height: auto;}
+figcaption { font-size: 0.8rem; color: #666; padding: 1rem; }
+figure figcaption:before { content: 'Fig. ' counter(figures) ' — '; }
+table.summary { margin: 3rem; max-width: 500px; float: left; }
+table.summary td { border: 0; vertical-align: top; text-align: left; padding: 0.5em; }
+table.summary th { border: 0; vertical-align: top; text-align: right; padding: 0.5em; font-weight: bold; }
+section.main { width: 100%; }
+table.syllabus {border-collapse: collapse; border-spacing: 0; border: none; max-width: 1024px; margin: 0 auto; clear: left; }
+table.syllabus th {font-weight: bold;}
+table.syllabus td, table.syllabus th {border: 1px solid #999; padding: 0.8rem; }
+table.syllabus tr:nth-of-type(odd) {background: #eee;}
+table.syllabus tr:nth-of-type(even) {background: #fff;}
+table thead {cursor: default;}
+
+footer { padding: 1rem; }
+
+/*.pentamestre {display: none;}*/
+/* NOW COMES THE RESPONSIVE PART... */
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px) and not print {
+	body { background-position: left top; background-attachment: scroll; }
+	h1 {font-size:1.2rem;}
+	figure { width: 100%; display: block; padding: 0; }
+	div.imgover { width: 100%; height: 300px; overflow: hidden; }
+	figure img { width: 100%; height: auto; }
+	section { display: flex; flex-direction: column; }
+	table.summary th { text-align: left; }
+	/* Force table to not be like tables anymore */
+	table.syllabus table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	table.syllabus th[scope="row"]:before { content: "Lezione №"; }
+	/* Hide table headers (but not display: none;, for accessibility) */
+	table.syllabus thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	table.syllabus tr { border: 1px solid #ccc; }
+	table.syllabus td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	table.syllabus td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}	
+	/*
+	Label the data
+	*/
+	table.syllabus td:nth-of-type(1):before { content: "Data"; }
+	table.syllabus td:nth-of-type(2):before { content: "Libro"; }
+	table.syllabus td:nth-of-type(3):before { content: "Unità"; }
+	table.syllabus td:nth-of-type(4):before { content: "Capitolo"; }
+	table.syllabus td:nth-of-type(5):before { content: "Paragrafo"; }
+	table.syllabus td:nth-of-type(6):before { content: "Pagine"; }
+	table.syllabus td:nth-of-type(7):before { content: "Note"; }
+}
+
+@media only print {
+	body {margin:0;padding:0;font-size:0.8rem;}
+	table.syllabus  {margin:0;}
+	.update {display:none;}
+	table.syllabus td, table.syllabus th {border: 2px solid #666; padding: 0.5rem;}
+}
+
+@media only tty {
+	figure { display: none; }
+}
+.update { color: #999; font-style: italic;}	
