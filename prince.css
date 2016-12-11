@@ -2,28 +2,39 @@
 	font-family: serif;
 	font-style: normal;
 	font-weight: normal;
-	src: url(/home/shoichi/.fonts/LinLibertine_R.otf);
+	src: url("/home/shoichi/.fonts/Charter Regular.otf");
 }
 
 @font-face {
 	font-family: serif;
 	font-style: italic;
 	font-weight: normal;
-	src: url(/home/shoichi/.fonts/LinLibertine_RI.otf);
+	src: url("/home/shoichi/.fonts/Charter Italic.otf");
 }
 
 @font-face {
 	font-family: serif;
 	font-style: normal;
 	font-weight: bold;
-	src: url(/home/shoichi/.fonts/LinLibertine_RB.otf);
+	src: url("/home/shoichi/.fonts/Charter Bold.otf");
+}
+
+@font-face {
+	font-family: serif;
+	font-style: italic;
+	font-weight: bold;
+	src: url("/home/shoichi/.fonts/Charter Bold Italic.otf");
 }
 
 body { font-family: serif; font-size: 12pt; }
 
+.syllabus thead th:nth-of-type(1) {
+	content: "N°"; }
+
 .syllabus tbody td:nth-of-type(1)
 { white-space: nowrap; }
 
+#dllink,
 .syllabus thead th:nth-of-type(4),
 .syllabus thead th:nth-of-type(5),
 .syllabus thead th:nth-of-type(6),

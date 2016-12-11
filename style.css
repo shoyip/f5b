@@ -22,6 +22,8 @@ header { color: #fff; height: 100px; background: url("logo.svg") no-repeat #1078
 div.tns { display: table-cell; vertical-align: middle; }
 header h1 { margin-bottom: 0; font-size: 1.7rem; font-weight: bold; }
 .sub { font-size: 1.2rem; color: #fff; }
+#dllink { color: #fff; display: inline-block; background: url(dl.svg) no-repeat #107896 13px 50%/20px auto; padding: 15px; padding-left: 45px; float: right; font-weight: bold; text-decoration: none; }
+a#dllink:hover { background: url(dl_h.svg) no-repeat #fff 13px 50%/20px auto; color: #107896; }
 section.intro { width: 100%; }
 figure { width: 150px; counter-increment: figures; float: left; padding: 2rem; }
 figure img { width: inherit; height: auto;}
