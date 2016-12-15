@@ -36,7 +36,7 @@ body { font-family: serif; font-size: 11pt; }
 
 .syllabus tbody tr td, .syllabus tbody tr th, .syllabus thead tr th { background-color: #fff; padding: 0.2cm; border: 1px solid black; }
 
-th { font-weight: bold; color: #107896; }
+/*th { font-weight: bold; color: #107896; }*/
 
 #dllink,
 .syllabus thead th:nth-of-type(4),
